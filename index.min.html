@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="js/app.min.js"></script>
+		<style type="text/css">
+			#lbm_canvas { border: 1px solid black; }
+		</style>
+	</head>
+
+	<body onload="on_body_load();">
+		<canvas id="lbm_canvas"></canvas>
+		<br>
+		<label for="lbm_select">Scenario:</label>
+		<select id="lbm_select"></select>
+		<br>
+		<label for="lbm_range_steps">Steps per frame: </label><span id="lbm_span_steps"></span>
+		<input type="range" step="1" id="lbm_range_steps" onchange="lbm_steps_changed()">
+		<br>
+		<button id="lbm_btn_run" onclick="lbm_run()">Run</button>
+		<button id="lbm_btn_stop" onclick="lbm_stop()">Stop</button>
+		<button id="lbm_btn_continue" onclick="lbm_continue()">Continue</button>
+	</body>
+</html>
